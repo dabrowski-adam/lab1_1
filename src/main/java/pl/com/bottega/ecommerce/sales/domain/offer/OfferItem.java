@@ -117,18 +117,8 @@ public class OfferItem {
             return false;
         }
 
-        BigDecimal max;
-        BigDecimal min;
-        if (totalCost.compareTo(other.totalCost) > 0) {
-            max = totalCost;
-            min = other.totalCost;
-        } else {
-            max = other.totalCost;
-            min = totalCost;
-        }
-
-        BigDecimal difference = max.subtract(min);
-        BigDecimal acceptableDelta = max.multiply(BigDecimal.valueOf(delta / 100));
+        BigDecimal difference = totalCost.subtract(other.totalCost).abs();
+        BigDecimal acceptableDelta = totalCost.max(other.totalCost).multiply(BigDecimal.valueOf(delta / 100));
 
         return acceptableDelta.compareTo(difference) > 0;
     }
