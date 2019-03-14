@@ -101,6 +101,10 @@ public class OfferItem {
      * @return
      */
     public boolean sameAs(OfferItem other, double delta) {
+        if (other == null) {
+            return false;
+        }
+
         if (product == null) {
             if (other.product != null) {
                 return false;
