@@ -25,9 +25,7 @@ public class Offer {
     @Override
     public int hashCode() {
         final int prime = 31;
-        int result = 1;
-        result = prime * result + (availableItems == null ? 0 : availableItems.hashCode());
-        return result;
+        return prime + (availableItems == null ? 0 : availableItems.hashCode());
     }
 
     @Override
