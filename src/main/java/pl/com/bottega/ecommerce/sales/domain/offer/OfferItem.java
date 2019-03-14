@@ -96,7 +96,7 @@ public class OfferItem {
     }
 
     /**
-     * @param item
+     * @param other
      * @param delta acceptable percentage difference
      * @return
      */
