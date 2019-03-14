@@ -4,14 +4,14 @@ import java.util.Objects;
 
 public class Discount {
 
+    private String cause;
+
+    private Money value;
+
     public Discount(String cause, Money value) {
         this.cause = cause;
         this.value = value;
     }
-
-    private String cause;
-
-    private Money value;
 
     public String getCause() {
         return cause;

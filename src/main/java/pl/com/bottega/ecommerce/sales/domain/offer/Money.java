@@ -5,14 +5,14 @@ import java.util.Objects;
 
 public class Money {
 
+    private BigDecimal amount;
+
+    private String currency;
+
     public Money(BigDecimal amount, String currency) {
         this.amount = amount;
         this.currency = currency;
     }
-
-    private BigDecimal amount;
-
-    private String currency;
 
     public BigDecimal getAmount() {
         return amount;

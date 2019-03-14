@@ -6,14 +6,6 @@ import java.util.Objects;
 
 public class Product {
 
-    public Product(String id, Money price, String name, Date snapshot, String type) {
-        this.id = id;
-        this.price = price;
-        this.name = name;
-        this.snapshot = snapshot;
-        this.type = type;
-    }
-
     private String id;
 
     private Money price;
@@ -23,6 +15,14 @@ public class Product {
     private Date snapshot;
 
     private String type;
+
+    public Product(String id, Money price, String name, Date snapshot, String type) {
+        this.id = id;
+        this.price = price;
+        this.name = name;
+        this.snapshot = snapshot;
+        this.type = type;
+    }
 
     public String getId() {
         return id;
