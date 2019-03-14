@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class Product {
 
-    public Product(String id, BigDecimal price, String name, Date snapshot, String type) {
+    public Product(String id, Money price, String name, Date snapshot, String type) {
         this.id = id;
         this.price = price;
         this.name = name;
@@ -16,7 +16,7 @@ public class Product {
 
     private String id;
 
-    private BigDecimal price;
+    private Money price;
 
     private String name;
 
@@ -28,7 +28,7 @@ public class Product {
         return id;
     }
 
-    public BigDecimal getPrice() {
+    public Money getPrice() {
         return price;
     }
 
